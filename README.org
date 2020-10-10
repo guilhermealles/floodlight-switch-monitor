@@ -1,27 +1,49 @@
-#+TITLE: Switch monitor for Floodlight
+* Switch monitor for Floodlight
 
 This script runs a simple monitor that checks the transfer rates of each link of every OF switch in a Floodlight controlled SDN.
+** What does it look like?
 
-* Usage
+Pretty simple ;) 
 
-** Dependencies
+| Switch                  |   Port | Tx           | Rx          |
+|-------------------------+--------+--------------+-------------|
+| 00:00:00:00:00:00:00:01 |      1 | NA           | 9.902679443 |
+| 00:00:00:00:00:00:00:01 |      2 | 10.116394997 | NA          |
+| 00:00:00:00:00:00:00:01 |      3 | NA           | NA          |
+| 00:00:00:00:00:00:00:02 |      1 | NA           | 9.441822052 |
+| 00:00:00:00:00:00:00:02 |      2 | NA           | NA          |
+| 00:00:00:00:00:00:00:02 |      3 | NA           | NA          |
+| 00:00:00:00:00:00:00:02 |      4 | 9.441822052  | NA          |
+| 00:00:00:00:00:00:00:03 |      1 | 9.446569443  | NA          |
+| 00:00:00:00:00:00:00:03 |      2 | NA           | 9.441822052 |
+| 00:00:00:00:00:00:00:03 |      3 | 9.446442604  | NA          |
+| 00:00:00:00:00:00:00:03 |      4 | 9.446442604  | NA          |
+| 00:00:00:00:00:00:00:04 |      1 | NA           | NA          |
+| 00:00:00:00:00:00:00:04 |      2 | NA           | NA          |
+| 00:00:00:00:00:00:00:04 |      3 | NA           | 9.437202454 |
+| 00:00:00:00:00:00:00:05 |      1 | NA           | NA          |
+| 00:00:00:00:00:00:00:05 |      2 | NA           | 9.437202454 |
 
-Install the dependencies with
+** Usage
 
-#+BEGIN_SRC sh
-pip install -r requirements.txt
-#+END_SRC
+*** Dependencies
 
-** Execution
+ Install the dependencies with
 
-The script relies on the =FLOODLIGHT_BASEURL= environment variable to find the controller API. Assuming the controller is running on the same host as the scipt, export the base URL as such
+ #+BEGIN_SRC sh
+ pip install -r requirements.txt
+ #+END_SRC
 
-#+BEGIN_SRC sh
-export FLOODLIGHT_BASEURL='http://localhost:8080'
-#+END_SRC
+*** Execution
 
-... then start the monitor
+ The script relies on the =FLOODLIGHT_BASEURL= environment variable to find the controller API. Assuming the controller is running on the same host as the scipt, export the base URL as such
 
-#+BEGIN_SRC sh
-python main.py
-#+END_SRC
+ #+BEGIN_SRC sh
+ export FLOODLIGHT_BASEURL='http://localhost:8080'
+ #+END_SRC
+
+ ... then start the monitor
+
+ #+BEGIN_SRC sh
+ python main.py
+ #+END_SRC
