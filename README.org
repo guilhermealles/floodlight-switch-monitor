@@ -4,6 +4,30 @@
 
 This script runs a simple monitor that checks the transfer rates of each link of every OF switch in a Floodlight controlled SDN.
 
+** Usage
+
+*** Dependencies
+
+ Install the dependencies with
+
+ #+BEGIN_SRC sh
+ pip install -r requirements.txt
+ #+END_SRC
+
+*** Execution
+
+ The script relies on the =FLOODLIGHT_BASEURL= environment variable to find the controller API. Assuming the controller is running on the same host as the scipt, export the base URL as such
+
+ #+BEGIN_SRC sh
+ export FLOODLIGHT_BASEURL='http://localhost:8080'
+ #+END_SRC
+
+ ... then start the monitor
+
+ #+BEGIN_SRC sh
+ python main.py
+ #+END_SRC
+
 ** What does it look like?
 
 Pretty simple ;)
@@ -32,27 +56,3 @@ The script outputs a table with the Tx and Rx values of each port of every switc
 | 00:00:00:00:00:00:00:05 |    2 | NA        | NA        |
 
 #+END_SRC
-
-** Usage
-
-*** Dependencies
-
- Install the dependencies with
-
- #+BEGIN_SRC sh
- pip install -r requirements.txt
- #+END_SRC
-
-*** Execution
-
- The script relies on the =FLOODLIGHT_BASEURL= environment variable to find the controller API. Assuming the controller is running on the same host as the scipt, export the base URL as such
-
- #+BEGIN_SRC sh
- export FLOODLIGHT_BASEURL='http://localhost:8080'
- #+END_SRC
-
- ... then start the monitor
-
- #+BEGIN_SRC sh
- python main.py
- #+END_SRC
