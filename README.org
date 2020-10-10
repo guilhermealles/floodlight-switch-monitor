@@ -8,7 +8,7 @@ This script runs a simple monitor that checks the transfer rates of each link of
 
 Pretty simple ;)
 
-The script outputs a table with the Tx and Rx values of each port of every switch registered with Floodlight. Something like this:
+The script outputs a table with the Tx and Rx values of each port of every switch registered with Floodlight. The table is updated every second, and it looks something like this:
  
 #+BEGIN_SRC
 
