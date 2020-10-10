@@ -14,7 +14,8 @@ def main():
     response.sort(key=switch_port)
     response.sort(key=switch_name)
     tabulated_data = [[switch_name(x), switch_port(x), switch_tx_mbps(x), switch_rx_mbps(x)] for x in response]
-    print(tabulate(tabulated_data, headers=['Switch', 'Port', 'Tx', 'Rx'], tablefmt="orgtbl"))
+    print(tabulate(tabulated_data, headers=[
+          'Switch', 'Port', 'Tx (Mbps)', 'Rx (Mbps)'], tablefmt="orgtbl"))
     time.sleep(1)
 
 def switch_name(switch_obj):
