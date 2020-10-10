@@ -6,7 +6,11 @@ This script runs a simple monitor that checks the transfer rates of each link of
 
 ** What does it look like?
 
-Pretty simple ;) 
+Pretty simple ;)
+
+The script outputs a table with the Tx and Rx values of each port of every switch registered with Floodlight. Something like this:
+ 
+#+BEGIN_SRC
 
 |                  Switch | Port | Tx (Mbps) | Rx (Mbps) |
 |-------------------------+------+-----------+-----------|
@@ -26,6 +30,8 @@ Pretty simple ;)
 | 00:00:00:00:00:00:00:04 |    3 | NA        | NA        |
 | 00:00:00:00:00:00:00:05 |    1 | NA        | NA        |
 | 00:00:00:00:00:00:00:05 |    2 | NA        | NA        |
+
+#+END_SRC
 
 ** Usage
 
