@@ -8,25 +8,25 @@ This script runs a simple monitor that checks the transfer rates of each link of
 
 *** Dependencies
 
- Install the dependencies with
+The monitor was built to work with Python 3. At the project root, install the dependencies with
 
- #+BEGIN_SRC sh
- pip install -r requirements.txt
- #+END_SRC
+#+BEGIN_SRC sh
+pip install -r requirements.txt
+#+END_SRC
 
 *** Execution
 
- The script relies on the =FLOODLIGHT_BASEURL= environment variable to find the controller API. Assuming the controller is running on the same host as the scipt, export the base URL as such
+The script relies on the =FLOODLIGHT_BASEURL= environment variable to find the controller API. Assuming the controller is running on the same host as the scipt, export the base URL as such
 
- #+BEGIN_SRC sh
- export FLOODLIGHT_BASEURL='http://localhost:8080'
- #+END_SRC
+#+BEGIN_SRC sh
+export FLOODLIGHT_BASEURL='http://localhost:8080'
+#+END_SRC
 
- ... then start the monitor
+... then start the monitor
 
- #+BEGIN_SRC sh
- python main.py
- #+END_SRC
+#+BEGIN_SRC sh
+python main.py
+#+END_SRC
 
 ** What does it look like?
 
